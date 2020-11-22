@@ -11,6 +11,8 @@ import Homepage from './pages/Homepage';
 import AddwordPage from './pages/Addwordpage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import Topbar from './components/Topbar';
+import MainPage from './pages/MainPage';
 const Styledrapper = styled.div`
  
 `
@@ -18,28 +20,8 @@ function App() {
 
   return (
     <Styledrapper >
-
-      <div>
-        <div>
-          <Link to="/">Homepage</Link>
-        </div>
-        <div>
-          <Link to="/login">LoginPage</Link>
-        </div>
-        <div>
-          <Link to="/register">RegisterPage</Link>
-        </div>
-        <div>
-          <Link to="/add-word">AddwordPage</Link>
-        </div>
-
-      </div>
-
+   
       <Switch>
-
-        <Route path="/add-word">
-          <AddwordPage />
-        </Route>
 
         <Router path="/login">
           <LoginPage />
@@ -47,13 +29,14 @@ function App() {
 
         <Route path="/register">
           <RegisterPage />
-        </Route>
-
-        <Route path="/">
-          <Homepage />
+        </Route>  
+        
+        <Route path='/'>
+          <MainPage/>
         </Route>
 
       </Switch>
+    
     </Styledrapper>
   );
 }
